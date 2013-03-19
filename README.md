@@ -1,0 +1,4 @@
+KCR
+===
+
+Komunikačije človek računalnik
