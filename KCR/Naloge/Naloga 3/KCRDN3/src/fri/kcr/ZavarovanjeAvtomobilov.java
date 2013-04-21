@@ -14,7 +14,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Calendar;
-import java.util.List;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
@@ -142,7 +141,7 @@ public class ZavarovanjeAvtomobilov extends javax.swing.JFrame {
         obvestilo_zavarovanje = new javax.swing.JLabel();
         g_nazaj_zavarovanje = new javax.swing.JButton();
         g_shrani = new javax.swing.JButton();
-        g_počisti = new javax.swing.JButton();
+        g_pocisti = new javax.swing.JButton();
         Meni = new javax.swing.JMenuBar();
         Datoteka = new javax.swing.JMenu();
         m_shrani = new javax.swing.JMenuItem();
@@ -565,13 +564,13 @@ public class ZavarovanjeAvtomobilov extends javax.swing.JFrame {
         });
         Zavarovanje.add(g_shrani, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
 
-        g_počisti.setText("Počisti vse");
-        g_počisti.addActionListener(new java.awt.event.ActionListener() {
+        g_pocisti.setText("Počisti vse");
+        g_pocisti.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gumbi(evt);
             }
         });
-        Zavarovanje.add(g_počisti, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, -1, -1));
+        Zavarovanje.add(g_pocisti, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, -1, -1));
 
         Delovna_Plosca.addTab("Podatki o zavarovanju", Zavarovanje);
 
@@ -818,7 +817,7 @@ public class ZavarovanjeAvtomobilov extends javax.swing.JFrame {
             }else{
                 obvesti();
             }
-        }else if(evt.getSource() == g_počisti){
+        }else if(evt.getSource() == g_pocisti){
             pocisti();
         }
     }//GEN-LAST:event_gumbi
@@ -1159,8 +1158,8 @@ public class ZavarovanjeAvtomobilov extends javax.swing.JFrame {
     private javax.swing.JButton g_nazaj_vozilo;
     private javax.swing.JButton g_nazaj_zavarovanje;
     private javax.swing.JRadioButton g_odbitna;
+    private javax.swing.JButton g_pocisti;
     private javax.swing.JRadioButton g_polno;
-    private javax.swing.JButton g_počisti;
     private javax.swing.JButton g_shrani;
     private javax.swing.JScrollPane izbira_dodatno;
     private javax.swing.JLabel jLabel1;
