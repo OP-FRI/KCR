@@ -25,9 +25,9 @@ public class Oseba {
     public final void narediRacune(int n){
         racuni = new Racun[n];
         if (n == 3){
-            racuni[0] = new Racun("Domači račun", "sda", 217.45);
-            racuni[1] = new Racun("Službeni račun", "sda", -12540);
-            racuni[2] = new Racun("Neobdavčeni račun", "sda", 220364.01);
+            racuni[0] = new Racun("Domači račun", "SI56 234567890123456", 217.45);
+            racuni[1] = new Racun("Službeni račun", "SI56 345678901234567", -11984.45);
+            racuni[2] = new Racun("Neobdavčeni račun", "SI56 456789012345678", 220364.01);
         } else if(n == 1){
             racuni[0] = new Racun("Domači račun", "SI56 987654321098765", 200);
         }

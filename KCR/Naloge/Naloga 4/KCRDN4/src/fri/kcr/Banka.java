@@ -92,6 +92,7 @@ public class Banka extends javax.swing.JFrame {
         l_ip_znesek = new javax.swing.JLabel();
         v_ip_znesek = new javax.swing.JTextField();
         n_ip_znesek = new javax.swing.JLabel();
+        l_ip_EUR = new javax.swing.JLabel();
         Stanje = new javax.swing.JPanel();
         prikaz_stanja = new javax.swing.JScrollPane();
         stanja = new javax.swing.JTextArea();
@@ -154,46 +155,40 @@ public class Banka extends javax.swing.JFrame {
         PrijavnikLayout.setHorizontalGroup(
             PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PrijavnikLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(l_geslo, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(l_ime, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ime, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
+                    .addComponent(geslo))
+                .addGap(12, 12, 12)
                 .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PrijavnikLayout.createSequentialGroup()
-                        .addGap(166, 166, 166)
-                        .addComponent(potrditev))
-                    .addGroup(PrijavnikLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(l_ime, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(l_geslo, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(PrijavnikLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ime, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PrijavnikLayout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(geslo)))
-                        .addGap(12, 12, 12)
-                        .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(n_geslo, 0, 0, Short.MAX_VALUE)
-                            .addComponent(n_ime, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(n_geslo, 0, 1, Short.MAX_VALUE)
+                    .addComponent(n_ime, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
+            .addGroup(PrijavnikLayout.createSequentialGroup()
+                .addGap(164, 164, 164)
+                .addComponent(potrditev)
+                .addContainerGap(164, Short.MAX_VALUE))
         );
         PrijavnikLayout.setVerticalGroup(
             PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PrijavnikLayout.createSequentialGroup()
                 .addGap(51, 51, 51)
-                .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(l_ime)
-                    .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(ime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(n_ime, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n_ime, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(l_ime))
                 .addGap(36, 36, 36)
-                .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(l_geslo)
-                    .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(geslo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(n_geslo, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addGroup(PrijavnikLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(geslo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n_geslo, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(l_geslo))
+                .addGap(58, 58, 58)
                 .addComponent(potrditev)
-                .addGap(59, 59, 59))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         Obvestilnik.setTitle("Obvestilo");
@@ -232,7 +227,7 @@ public class Banka extends javax.swing.JFrame {
                 .addComponent(obvestilnik2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65)
                 .addComponent(obvestilnik_vredu)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         Operacije.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -240,8 +235,8 @@ public class Banka extends javax.swing.JFrame {
         Operacije.setMinimumSize(new java.awt.Dimension(400, 300));
         Operacije.setResizable(false);
 
-        izpis_operacij.setColumns(20);
         izpis_operacij.setEditable(false);
+        izpis_operacij.setColumns(20);
         izpis_operacij.setRows(5);
         izpis_operacij.setMinimumSize(new java.awt.Dimension(400, 300));
         Izpisi_operacije.setViewportView(izpis_operacij);
@@ -358,20 +353,18 @@ public class Banka extends javax.swing.JFrame {
                                         .addComponent(v_SI, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(UPNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(l_naziv)
                                     .addComponent(l_referenca)
                                     .addComponent(l_IBAN)
                                     .addComponent(l_znesek)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UPNLayout.createSequentialGroup()
                                         .addGroup(UPNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(v_naziv, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
-                                            .addComponent(v_znesek, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
-                                            .addComponent(v_IBAN, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
-                                            .addComponent(v_referenca, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE))
+                                            .addComponent(v_znesek, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
+                                            .addComponent(v_IBAN, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
+                                            .addComponent(v_referenca, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(UPNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(n_referenca, 0, 0, Short.MAX_VALUE)
-                                            .addComponent(n_IBAN, 0, 0, Short.MAX_VALUE)
+                                            .addComponent(n_referenca, 0, 1, Short.MAX_VALUE)
+                                            .addComponent(n_IBAN, 0, 1, Short.MAX_VALUE)
                                             .addComponent(n_znesek, javax.swing.GroupLayout.DEFAULT_SIZE, 12, Short.MAX_VALUE)))))
                             .addGroup(UPNLayout.createSequentialGroup()
                                 .addGroup(UPNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -385,7 +378,7 @@ public class Banka extends javax.swing.JFrame {
                                 .addGroup(UPNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(v_postnast)
                                     .addComponent(l_postnast, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE))))
                     .addGroup(UPNLayout.createSequentialGroup()
                         .addGap(168, 168, 168)
                         .addComponent(vredu)))
@@ -399,6 +392,15 @@ public class Banka extends javax.swing.JFrame {
                             .addComponent(v_osebnizaz, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(l_osebnizaz))))
                 .addGap(47, 47, 47))
+            .addGroup(UPNLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(UPNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(UPNLayout.createSequentialGroup()
+                        .addComponent(v_naziv)
+                        .addGap(282, 282, 282))
+                    .addGroup(UPNLayout.createSequentialGroup()
+                        .addComponent(l_naziv)
+                        .addContainerGap(584, Short.MAX_VALUE))))
         );
         UPNLayout.setVerticalGroup(
             UPNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -449,7 +451,7 @@ public class Banka extends javax.swing.JFrame {
                                     .addComponent(v_ulica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(v_posta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(v_postnast, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                                 .addComponent(vredu))))
                     .addGroup(UPNLayout.createSequentialGroup()
                         .addComponent(v_osebnizaz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -499,6 +501,10 @@ public class Banka extends javax.swing.JFrame {
 
         n_ip_znesek.setLabelFor(v_ip_znesek);
 
+        l_ip_EUR.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        l_ip_EUR.setLabelFor(v_ip_znesek);
+        l_ip_EUR.setText("EUR");
+
         javax.swing.GroupLayout NakaziloLayout = new javax.swing.GroupLayout(Nakazilo);
         Nakazilo.setLayout(NakaziloLayout);
         NakaziloLayout.setHorizontalGroup(
@@ -512,11 +518,15 @@ public class Banka extends javax.swing.JFrame {
                             .addComponent(l_imeprej)
                             .addGroup(NakaziloLayout.createSequentialGroup()
                                 .addGroup(NakaziloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, NakaziloLayout.createSequentialGroup()
+                                        .addComponent(l_ip_EUR)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(v_ip_znesek, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(v_imeprej, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(v_strac, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 554, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(NakaziloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(n_ip_znesek, 0, 0, Short.MAX_VALUE)
+                                    .addComponent(n_ip_znesek, 0, 1, Short.MAX_VALUE)
                                     .addComponent(n_strac, javax.swing.GroupLayout.DEFAULT_SIZE, 14, Short.MAX_VALUE)))))
                     .addGroup(NakaziloLayout.createSequentialGroup()
                         .addGap(296, 296, 296)
@@ -526,13 +536,11 @@ public class Banka extends javax.swing.JFrame {
                         .addComponent(l_hitroplac))
                     .addGroup(NakaziloLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(v_hitroplac, javax.swing.GroupLayout.PREFERRED_SIZE, 519, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(l_ip_znesek))
                     .addGroup(NakaziloLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(NakaziloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(v_ip_znesek, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(l_ip_znesek))))
-                .addGap(65, 65, 65))
+                        .addComponent(v_hitroplac, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         NakaziloLayout.setVerticalGroup(
             NakaziloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -552,8 +560,9 @@ public class Banka extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(NakaziloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(v_ip_znesek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(n_ip_znesek, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                    .addComponent(n_ip_znesek, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(l_ip_EUR))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addComponent(l_hitroplac)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(v_hitroplac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -577,8 +586,8 @@ public class Banka extends javax.swing.JFrame {
             }
         });
 
-        stanja.setColumns(20);
         stanja.setEditable(false);
+        stanja.setColumns(20);
         stanja.setRows(5);
         stanja.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -686,13 +695,15 @@ public class Banka extends javax.swing.JFrame {
                 out.println("Naslov:");
                 out.println(v_ulica.getText());
                 out.println(v_postnast.getText() + " " +  v_posta.getText());
-                out.println("Številka računa:");
-                out.println("SI-56 " + v_IBAN.getText());
-                out.println("Referenca:");
-                out.println("SI " + v_SI.getText() + " " + v_referenca.getText());           
+                out.println("Številka računa: SI56 " + v_IBAN.getText());
+                out.println("Referenca: SI" + v_SI.getText() + " " + v_referenca.getText());           
                 out.println("Znesek:");                
                 out.println(v_znesek.getText() + " EUR");
                 out.println("Zaznamek: " + v_osebnizaz.getText());
+                out.println("________________________________________________");
+                out.println("Podatki o plačniku:");
+                out.println("Ime: " + osebe[0].dobiIme());
+                out.println("Številka računa: " + osebe[0].vrniRacune()[1].vrniStevilko());
                 out.close();
                 Obvestilnik.setVisible(true);
                 obvestilnik1.setText("Datoteka z imenom upn.");
@@ -1001,6 +1012,7 @@ public class Banka extends javax.swing.JFrame {
     private javax.swing.JLabel l_hitroplac;
     private javax.swing.JLabel l_ime;
     private javax.swing.JLabel l_imeprej;
+    private javax.swing.JLabel l_ip_EUR;
     private javax.swing.JLabel l_ip_znesek;
     private javax.swing.JLabel l_naziv;
     private javax.swing.JLabel l_osebnizaz;
